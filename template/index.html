@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CO<sub>2</sub> EMISSION USING DEEP LEARNING</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body{
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        justify-content:center;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Co2.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    .container{
+        width: 400px;
+        padding: 25px 35px;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+        border-radius: 10px;
+        position: relative;
+    }
+    
+    .container input p{
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #a0a3a0;
+        background: #fff;
+        border-radius: 5px;
+        outline: none;
+        color: black;
+        font-size: 1em;
+    }
+</style>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+<!-- <style>
+    .heading{
+        font-weight: 100;
+        font-size: 4em;
+        text-shadow: 1px 1px 5px black;
+    }
+    img{
+        height: 90%;
+        width: 90%;
+    }
+    .text
+    {
+        font-size: 32px;
+        font-style: italic;
+    }
+    h1
+    {
+        text-align: center;
+    }
+    p
+    {
+        text-align: center;
+    }
+	table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  
+}
+th, td {
+  background-color: #96D4D4;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style> -->
+</head>
+<!-- <body style="background-color: #fe676e;"> -->
+<!-- <div class ="container">
+<div class="jumbotron" style="background-color: #ccff00;">
+    <div class="container" >
+        <h1 class ='heading' >Co<sub>2</sub> Emission Using Depp Learning</h1>
+        <p> Predict your car Co<sub>2</sub> Rating.... </p>
+    </div>
+</div> -->
+<body>
+  <h1 class ='heading' style="color: rgb(195, 192, 192);">CO<sub>2</sub> EMISSION USING DEEP LEARNING</h1>
+  <p style="color: rgb(195, 192, 192);"> Predict your car CO<sub>2</sub> Rating </p>
+
+  <form method="POST" action="/" enctype="multipart/form-data">
+  <div id = "data" class = "container">
+<center> <h2 style="color: rgb(195, 192, 192); font-size: 15px;">Table with CO<sub>2</sub> parameter and input value</h2> </center><br>
+
+    
+    <p style="color: rgb(195, 192, 192);">Model year :</p>
+    <p><input type="text" name="input1" size="24px"></p><br>
+  
+    <p style="color: rgb(195, 192, 192);">Make :</p>
+    <p> <select name="dropdown1" style="width: 200px;">
+	        <option value="Select" style="text-align: center;">--Select--</option>
+            <option value="Acura" >Acura</option>
+            <option value="Alfa Romeo" >Alfa Romeo</option>
+            <option value="Aston Martin" >Aston Martin</option>
+            <option value="Audi" >Audi</option>
+            <option value="Bentley" >Bentley</option>
+            <option value="BMW" >BMW</option>
+            <option value="Bugatti" >Bugatti</option>
+            <option value="Buick" >Buick</option>
+            <option value="Cadillac" >Cadillac</option>
+            <option value="Chevrolet" >Chevrolet</option>
+            <option value="Chrysler" >Chrysler</option>
+            <option value="Dodge" >Dodge</option>
+            <option value="Daewoo" >Daewoo</option>
+            <option value="Eagle" >Eagle</option>
+            <option value="Ford" >Ford</option>
+            <option value="FIAT" >FIAT</option>
+            <option value="Ferrari" >Ferrari</option>
+            <option value="Genesis" >Genesis</option>
+            <option value="GMC" >GMC</option>
+            <option value="Geo" >Geo</option>
+            <option value="Honda" >Honda</option>
+            <option value="Hummer" >Hummer</option>
+            <option value="Hyundai" >Hyundai</option>
+            <option value="Isuzu" >Isuzu</option>
+            <option value="Infiniti" >Infiniti</option>
+            <option value="Jaguar" >Jaguar</option>
+            <option value="Jeep" >Jeep</option>
+            <option value="Kia" >Kia</option>
+            <option value="Lamborghini" >Lamborghini</option>
+            <option value="Land Rover" >Land Rover</option>
+            <option value="Lexus" >Lexus</option>
+            <option value="Lincoln" >Lincoln</option>
+            <option value="Maserati" >Maserati</option>
+            <option value="Mazda" >Mazda</option>
+            <option value="Mercedes-Benz" >Mercedes-Benz</option>
+            <option value="MINI" >MINI</option>
+            <option value="Mercury" >Mercury</option>
+            <option value="Mitsubishi" >Mitsubishi</option>
+            <option value="Nissan" >Nissan</option>
+            <option value="Oldsmobile" >Oldsmobile</option>
+            <option value="Plymouth" >Plymouth</option>
+            <option value="Pontiac" >Pontiac</option>
+            <option value="Porsche" >Porsche</option>
+            <option value="Ram" >Ram</option>
+            <option value="Rolls-Royce" >Rolls-Royce</option>
+            <option value="Subaru" >Subaru</option>
+            <option value="Suzuki" >Suzuki</option>
+            <option value="Scion" >Scion</option>
+            <option value="SRT" >SRT</option>
+            <option value="Saab" >Saab</option>
+            <option value="Saturn" >Saturn</option>
+            <option value="smart" >smart</option>
+            <option value="Toyota" >Toyota</option>
+            <option value="Volkswagen" >Volkswagen</option>
+            <option value="Volvo" >Volvo</option>
+        </select></p><br>
+
+    <p style="color: rgb(195, 192, 192);">Model :</p>
+    <p> <select name="dropdown2" style="width: 200px;">
+	        <option value="Select" style="text-align: center;">--Select--</option>
+            <option value="90" >90</option>
+            <option value="200" >200</option>
+			<option value="300" >300</option>
+			<option value="323" >323</option>
+			<option value="456" >456</option>
+			<option value="500" >500</option>
+			<option value="Accord" >Accord</option>
+			<option value="Achieva" >Achieva</option>
+			<option value="ActiveHybrid 3" >ActiveHybrid 3</option>
+			<option value="Alero" >Alero</option>
+			<option value="allroad" >allroad</option>
+			<option value="Alpina B7" >Alpina B7</option>
+			<option value="B 200" >B 200</option>
+			<option value="Z3 Roadster" >Z3 Roadster</option>
+        </select></p><br>
+ 
+    <p style="color: rgb(195, 192, 192);">Vehicle class :</p>
+    <p><select name="dropdown3" style="width: 200px;">
+	        <option value="Select" style="text-align: center;">--Select--</option>
+            <option value="Full-size" >Full-size</option>
+            <option value="Sport utility vehicle: Small" >Sport utility vehicle: Small</option>
+			<option value="Sport utility vehicle: Standard" >Sport utility vehicle: Standard</option>
+			<option value="Compact" >Compact</option>
+			<option value="Mid-size" >Mid-size</option>
+			<option value="Minicompact" >Minicompact</option>
+			<option value="Two-seater" >Two-seater</option>
+			<option value="Subcompact" >Subcompact</option>
+			<option value="Station wagon: Small" >Station wagon: Small</option>
+			<option value="Station wagon: Mid-size" >Station wagon: Mid-size</option>
+			<option value="Pickup truck: Small" >Pickup truck: Small</option>
+			<option value="Pickup truck: Standard" >Pickup truck: Standard</option>
+			<option value="Minivan" >Minivan</option>
+			<option value="Special purpose vehicle" >Special purpose vehicle</option>
+			<option value="Van: Cargo" >Van: Cargo</option>
+			<option value="Van: Passenger" >Van: Passenger</option>
+			<option value="Sport utility vehicle" >Sport utility vehicle</option>
+        </select></p><br>
+
+    <p style="color: rgb(195, 192, 192);">Engine size (L) :</p>
+    <p><input type="text" name="input2" size="24px"></p><br>
+
+    <p style="color: rgb(195, 192, 192);">Cylinders :</p>
+    <p><input type="text" name="input3" size="24px"></p><br>
+  
+    <p style="color: rgb(195, 192, 192);">Transmission :</p>
+    <p><select name="dropdown4" style="width: 200px;">
+	        <option value="Select" style="text-align: center;">--Select--</option>
+            <option value="AV7">AV7</option>
+            <option value="M6">M6</option>
+            <option value="AS10">AS10</option>
+            <option value="A8">A8</option>
+            <option value="A9">A9</option>
+            <option value="AM7">AM7</option>
+			<option value="M7" >M7</option>
+			<option value="AS9" >AS9</option>
+            <option value="A10" >A10</option>
+            <option value="A6" >A6</option>
+            <option value="AV8" >AV8</option>
+            <option value="AV6" >AV6</option>
+            <option value="AS6" >AS6</option>
+            <option value="AV10" >AV10</option>
+            <option value="M5" >M5</option>
+            <option value="AS5" >AS5</option>
+			<option value="AV1" >AV1</option>
+            <option value="AM6" >AM6</option>
+            <option value="AS7" >AS7</option>
+            <option value="AM8" >AM8</option>
+        </select></p><br>
+
+    <p style="color: rgb(195, 192, 192);">Fuel type :</p>
+    <p><select name="dropdown5" style="width: 200px;">
+	        <option value="Select" style="text-align: center;">--Select--</option>
+            <option value="Z" >Z</option>
+            <option value="X" >X</option>
+            <option value="D" >D</option>
+            <option value="E" >E</option>
+            <option value="N" >N</option>		
+        </select></p><br>
+
+    <p style="color: rgb(195, 192, 192);">City (L/100 km) :</p>
+    <p><input type="text" name="input4" size="24px"></p><br>
+ 
+    <p style="color: rgb(195, 192, 192);">Highway (L/100 km) :</p>
+    <p><input type="text" name="input5" size="24px"></p><br>
+
+    <p style="color: rgb(195, 192, 192);">Combined (L/100 km) :</p>
+    <p><input type="text" name="input6" size="24px"></p><br>
+  
+    <p style="color: rgb(195, 192, 192);">Combined (mpg) :</p>
+    <p><input type="text" name="input7" size="24px"></p><br>
+
+    <p style="color: rgb(195, 192, 192);">Smog Rating :</p>
+    <p><input type="text" name="input8" size="24px"></p><br>
+  
+  
+
+<br>
+<br>
+<center> <button type="submit" class="btn btn-primary" style="color: rgb(244, 8, 8); width: 100px;"> Predict </button> </center>
+</form>
+<br>
+<br>
+<p style="color: rgb(195, 192, 192);">{% if result_c %}</p>
+  <div class="row">
+      <div class="col-sm-4">
+      </div>
+       <div class="col-sm-8">
+           <p class="text" style="color: rgb(195, 192, 192);"> Co<sub>2</sub> rating : </p>
+           <p style="color: rgb(145, 183, 34);;"><b> <b>{{result_c['caption']}} </b> </b></p>
+           <br>
+		   <br>
+           <p class="text" style="color: rgb(195, 192, 192);"> Status : </p>
+           <p style="color: rgb(145, 183, 34);"><b> <b>{{result_c['status']}} </b> </b></p>
+           </div>
+  </div>
+<p style="color: rgb(145, 183, 34);">{% endif %}</p>
+</div>
+</body>
+</html>
